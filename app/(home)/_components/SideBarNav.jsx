@@ -29,7 +29,7 @@ const SideBarNav = () => {
       path: "/newsletter",
     },
   ];
-  const [activeIndex, setActiveIndex] = useState();
+  const [activeIndex, setActiveIndex] = useState(0);
 
   const getIconComponent = (iconName) => {
     const IconComponent = LucideIcons[iconName];

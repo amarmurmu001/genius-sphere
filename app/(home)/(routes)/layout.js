@@ -9,7 +9,10 @@ const homeLayout = ({ children }) => {
         <SideBarNav />
       </div>
       <Header />
+      <div className="ml-64">
+
       {children}
+      </div>
     </div>
   );
 };
