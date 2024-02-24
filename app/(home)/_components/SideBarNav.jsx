@@ -1,4 +1,5 @@
 'use client'
+import  Link  from 'next/link';
 import React, { useState } from "react";
 import * as LucideIcons from "lucide-react";
 
@@ -41,9 +42,11 @@ const SideBarNav = () => {
 
   return (
     <div className="h-full bg-white border-r flex flex-col overflow-y-auto shadow-md">
+      <Link href="/">
       <h1 className="text-lg font-extrabold border-b p-5 flex justify-center">
         GeniusSphere
       </h1>
+      </Link>
       <div className=" flex flex-col">
         {menuList.map((item, index) => (
           <div
