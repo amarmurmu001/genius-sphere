@@ -24,18 +24,22 @@ const getCourseLists = async () => {
 
 const getCourseById = async (id) => {
   const query = gql`
-    query Course {
-      courseList(where: { id: "${id}" }) {
-        chapter {
-          id
-          name
-          video {
-            url
-          }
-          youtubeUrl
+  query course {
+    courseList(where: {id: "`+id+`"}) {
+      chapter {
+        id
+        name
+        video {
+          url
         }
+        youtubeUrl
       }
+      description
+      name
+      id
     }
+  }
+  
   `;
   const result = await request(MASTER_URL, query);
   return result;
